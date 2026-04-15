@@ -94,20 +94,19 @@ npx skills add dontbesilent2025/dbskill
 
 ### 更新
 
-如果你是通过 Claude Code 官方 marketplace 安装的，更新分两步：
+如果你是通过 Claude Code 插件市场安装的，直接运行这 3 行：
 
 ```bash
 claude plugin marketplace update dontbesilent-skills
 claude plugin update dbs@dontbesilent-skills
-```
-
-如果你是在当前会话里刚更新完插件，再运行一次：
-
-```bash
 /reload-plugins
 ```
 
-如果你是通过 `npx skills add dontbesilent2025/dbskill` 安装的，那是 Skills CLI 的分发链路，不读取本仓库的 `.claude-plugin/marketplace.json` 版本号。对这条链路来说，真正重要的是仓库里的 skill 文件和知识库引用本身不能坏。
+如果你是通过 `npx skills add dontbesilent2025/dbskill` 安装的，重新运行一次原命令即可：
+
+```bash
+npx skills add dontbesilent2025/dbskill
+```
 
 ---
 
