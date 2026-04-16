@@ -1,6 +1,8 @@
 # dbskill
 
-dontbesilent 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 Claude Code skill。
+dontbesilent 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 13 个 Claude Code skill。
+
+**最新更新：v2.6.7**
 
 **作者**：[X](https://x.com/dontbesilent) · [小红书](https://xhslink.com/m/637xuspR4iI) · [抖音](https://v.douyin.com/pRUDhpBqOrc/)
 
@@ -62,6 +64,12 @@ npx skills add dontbesilent2025/dbskill
 | `/dbs-action` | 执行力诊断。阿德勒框架（原 dbs-unblock） |
 | `/dbs-deconstruct` | 概念拆解。维特根斯坦式审查 |
 
+### Agent 基建
+
+| Skill | 做什么 |
+|---|---|
+| `/dbs-agent-migration` | Agent 工作台迁移。把任意项目整理成 Claude Code / Codex 双端一致的 Agent 工作台：审计规则文件、识别真源、统一命名与 bridge |
+
 ### chatroom 系列
 
 | Skill | 做什么 |
@@ -113,6 +121,7 @@ Skill 之间会自动推荐下一步。比如：
 - action 发现不是执行力问题，而是方法选错了 → 推荐 slowisfast
 - 任何阶段如果用户想先听不同视角 → 推荐 chatroom
 - 任何阶段如果用户用了模糊概念 → 推荐 deconstruct
+- 用户明确提到 Claude Code、Codex、`AGENTS.md`、`CLAUDE.md`、skill bridge、工作台迁移、双端统一，或说“我的 Agent 工作台很乱”“帮我统一 Claude 和 Codex” → 推荐 `dbs-agent-migration`
 
 ---
 

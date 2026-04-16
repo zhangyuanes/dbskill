@@ -29,6 +29,7 @@ description: |
 | 觉得自己在任何关键决策上走捷径、想找更深入的方法、说"有没有更慢的方法" | `/dbs-slowisfast` | 慢就是快，找到值得慢做的环节 |
 | 知道该做什么但做不动、说"我总是拖延" | `/dbs-action` | 执行力诊断，阿德勒框架找到真正原因 |
 | 某个概念搞不清楚、说"这个词什么意思" | `/dbs-deconstruct` | 概念拆解，维特根斯坦式审查 |
+| 明确提到 Claude Code、Codex、AGENTS.md、CLAUDE.md、skill bridge、工作台迁移、双端统一，或说“我的 Agent 工作台很乱”“帮我统一 Claude 和 Codex” | `/dbs-agent-migration` | Agent 工作台迁移，整理规则文件、真源、命名与 Claude / Codex 双端 bridge |
 
 ---
 

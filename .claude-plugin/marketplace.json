@@ -4,8 +4,8 @@
     "name": "dontbesilent2025"
   },
   "metadata": {
-    "description": "dontbesilent 商业诊断工具箱 — 从 12,307 条推文中提炼方法论，做成 12 个 Claude Code skill",
-    "version": "2.6.4"
+    "description": "dontbesilent 商业诊断工具箱 — 从 12,307 条推文中提炼方法论，做成 13 个 Claude Code skill",
+    "version": "2.6.7"
   },
   "plugins": [
     {
@@ -127,6 +127,16 @@
       "category": "business-diagnostics",
       "keywords": ["slow-is-fast", "friction", "asset-building", "compounding", "chinese"],
       "skills": ["./skills/dbs-slowisfast"]
+    },
+    {
+      "name": "dbs-agent-migration",
+      "description": "Agent 工作台迁移。把任意项目整理成 Claude Code / Codex 双端一致的 Agent 工作台：审计规则文件、识别真源、统一命名与 bridge。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "workflow-infrastructure",
+      "keywords": ["agent", "migration", "codex", "claude-code", "agents-md", "bridge", "chinese"],
+      "skills": ["./skills/dbs-agent-migration"]
     }
   ]
 }
