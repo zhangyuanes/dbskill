@@ -4,8 +4,8 @@
     "name": "dontbesilent2025"
   },
   "metadata": {
-    "description": "dontbesilent 商业诊断工具箱 — 从 12,307 条推文中提炼方法论，做成 18 个 Claude Code skill",
-    "version": "2.9.0"
+    "description": "dontbesilent 商业诊断工具箱 — 从 12,307 条推文中提炼方法论，做成 19 个 Claude Code skill",
+    "version": "2.9.1"
   },
   "plugins": [
     {
@@ -177,6 +177,16 @@
       "category": "business-diagnostics",
       "keywords": ["goal", "clarity", "wittgenstein", "language-game", "chinese"],
       "skills": ["./skills/dbs-goal"]
+    },
+    {
+      "name": "dbs-good-question",
+      "description": "dontbesilent 好问题生成器。把模糊问题改写成 Agent 可推理、可批评、可验证的问题说明书，并判断自动化解决程度。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "thinking-tools",
+      "keywords": ["problem", "question", "agent", "automation", "explanation", "hard-to-vary", "chinese"],
+      "skills": ["./skills/dbs-good-question"]
     },
     {
       "name": "dbs-learning",

@@ -1,10 +1,12 @@
 # dbskill
 
-dontbesilent 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 18 个 Agent skill。
+dontbesilent 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 19 个 Agent skill。
 
 可在 Claude Code、Codex、Cursor、Trae Solo 等任意支持 skill / system prompt 的 Agent 上使用。
 
-**最新更新：v2.9.0**
+**最新更新：v2.9.1**
+
+**v2.9.1 新增**：好问题生成器（`/dbs-good-question`）。把模糊问题改写成 Agent 可推理、可批评、可验证的问题说明书，并判断这个问题能被自动化解决到什么程度。
 
 **v2.9.0 新增**：交互式学习（`/dbs-learning`）。把一个课题拆成连续学习文章，每次生成下一篇前先读取上一篇的「学习反馈」，根据用户的理解程度和兴趣方向调整深度、角度和节奏。学习文件默认放在当前项目的 `学习课题/{课题名}/`，如果当前目录是根目录、桌面、下载等泛目录，则自动放到 `~/Documents/dbskill-learning/{课题名}/`。
 
@@ -37,7 +39,7 @@ npx -y skills add dontbesilent2025/dbskill -g --all
 
 #### Trae Solo
 
-Trae Solo 一个 zip 装一个 skill。从 [GitHub Releases](https://github.com/dontbesilent2025/dbskill/releases) 下载最新的 `dbskill-版本号.zip`，解压后里面是 18 个独立的 skill zip（每个 zip 解压后根级是 `SKILL.md`），逐个拖进 Trae Solo 的「上传技能」窗口即可。
+Trae Solo 一个 zip 装一个 skill。从 [GitHub Releases](https://github.com/dontbesilent2025/dbskill/releases) 下载最新的 `dbskill-版本号.zip`，解压后里面是 19 个独立的 skill zip（每个 zip 解压后根级是 `SKILL.md`），逐个拖进 Trae Solo 的「上传技能」窗口即可。
 
 如果想本地构建，运行 `bash tools/build-skills.sh`，产物在 `dist/skills/`。
 
@@ -78,6 +80,7 @@ npx -y skills add dontbesilent2025/dbskill -g --all
 | `/dbs-action` | 执行力诊断。阿德勒框架（原 dbs-unblock） |
 | `/dbs-deconstruct` | 概念拆解。维特根斯坦式审查 |
 | `/dbs-goal` | 目标清晰化。把模糊目标审计成可检查的交付物 |
+| `/dbs-good-question` 或 `/好问题` | 好问题生成器。把模糊问题改成 Agent 可推理、可批评、可验证的问题说明书 |
 
 ### 学习工具
 
@@ -193,6 +196,10 @@ Skill 之间会自动推荐下一步。比如：
 - goal 审计通过但缺路径 → 推荐 benchmark
 - goal 审计通过但牵涉具体内容创作 → 推荐 content / hook / xhs-title
 - goal 审计中发现某个词是伪概念 → 推荐 deconstruct
+- 用户的问题太松、想判断能不能让 Agent 自动化解决、需要写问题说明书 → 推荐 good-question
+- good-question 发现问题本身是空转目标 → 推荐 goal
+- good-question 发现核心概念没定义 → 推荐 deconstruct
+- good-question 已经生成清楚的商业问题 → 推荐 diagnosis / benchmark / content
 - 任何阶段如果用户想先听不同视角 → 推荐 chatroom
 - 任何阶段如果用户用了模糊概念 → 推荐 deconstruct
 - 用户明确提到 Claude Code、Codex、`AGENTS.md`、`CLAUDE.md`、skill bridge、工作台迁移、双端统一，或说“我的 Agent 工作台很乱”“帮我统一 Claude 和 Codex” → 推荐 `dbs-agent-migration`
