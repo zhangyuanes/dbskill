@@ -4,8 +4,8 @@
     "name": "dontbesilent2025"
   },
   "metadata": {
-    "description": "dontbesilent 商业诊断工具箱 — 从 12,307 条推文中提炼方法论，做成 20 个 Claude Code skill",
-    "version": "2.12.1"
+    "description": "dontbesilent 商业诊断工具箱 — 从 12,307 条推文中提炼方法论，做成 21 个 Claude Code skill",
+    "version": "2.14.0"
   },
   "plugins": [
     {
@@ -57,6 +57,16 @@
       "category": "content-creation",
       "keywords": ["content", "creation", "copywriting", "social-media", "chinese"],
       "skills": ["./skills/dbs-content"]
+    },
+    {
+      "name": "dbs-content-system",
+      "description": "dontbesilent 内容结构化系统。把本地大量文稿、推文、选题、案例和课程稿搭成一个可持续生长的内容结构化工程：先审计内容规模与边界，再建立新工程、复制素材、抽取内容单元、生成主题地图与选题装配稿。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "workflow-infrastructure",
+      "keywords": ["content-system", "knowledge-project", "obsidian", "asset-structuring", "agent-workflow", "chinese"],
+      "skills": ["./skills/dbs-content-system"]
     },
     {
       "name": "dbs-hook",

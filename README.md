@@ -1,14 +1,15 @@
 # dbskill
 
-dontbesilent 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 20 个 Agent skill。
+dontbesilent 商业诊断工具箱。从 12,307 条推文中提炼方法论，做成 21 个 Agent skill。
 
 可在 Claude Code、Codex、Cursor、Trae Solo 等任意支持 skill / system prompt 的 Agent 上使用。
 
-**最新更新：v2.12.1**
+**最新更新：v2.14.0**
 
-**v2.12.1 更新**：`/dbs-agent-migration` 补齐 Grok Build 兼容，迁移目标扩展到 Claude Code / Codex / Grok 三端；同时更新了主入口路由、marketplace 和 release 包说明。
+**v2.14.0 更新**：把 `/dbs-content-system` 补成正式版标准。现在 skill 自带工程脚手架、规则文件、来源候选脚本、样本抽取脚本、去重候选脚本和 `Obsidian` 补链脚本。安装后可从空目录初始化工程、复制原始素材、自动产出第一批内容单元、生成主题地图与装配稿，并跑通关系、去重和总览校验。
 
-近期几次更新集中在 4 个方向：
+近期几次更新集中在 5 个方向：
+- 内容工程：新增内容结构化系统，支持把大量本地素材搭成可继续生长的内容资产工程
 - Agent 工作台迁移：支持 Grok Build，统一三端迁移语境
 - 决策系统：从业务决策记录扩展成通用个人决策系统
 - 学习与提问：新增 `dbs-learning`、`dbs-good-question`
@@ -41,7 +42,7 @@ npx -y skills add dontbesilent2025/dbskill -g --all
 
 #### Trae Solo
 
-Trae Solo 一个 zip 装一个 skill。从 [GitHub Releases](https://github.com/dontbesilent2025/dbskill/releases) 下载最新的 `dbskill-版本号.zip`，解压后里面是 20 个独立的 skill zip（每个 zip 解压后根级是 `SKILL.md`），逐个拖进 Trae Solo 的「上传技能」窗口即可。
+Trae Solo 一个 zip 装一个 skill。从 [GitHub Releases](https://github.com/dontbesilent2025/dbskill/releases) 下载最新的 `dbskill-版本号.zip`，解压后里面是 21 个独立的 skill zip（每个 zip 解压后根级是 `SKILL.md`），逐个拖进 Trae Solo 的「上传技能」窗口即可。
 
 如果想本地构建，运行 `bash tools/build-skills.sh`，产物在 `dist/skills/`。
 
@@ -84,6 +85,7 @@ npx -y skills add dontbesilent2025/dbskill -g --all
 | `/dbs-diagnosis` | 商业模式诊断。消解问题，不回答问题 |
 | `/dbs-benchmark` | 对标分析。五重过滤，排除噪音 |
 | `/dbs-content` | 内容创作诊断。五维检测 |
+| `/dbs-content-system` | 内容结构化系统。把本地大量内容资产搭成一个可持续生长的内容工程 |
 | `/dbs-hook` | 短视频开头优化。诊断 + 生成方案 |
 | `/dbs-xhs-title` | 小红书标题公式。75 个爆款公式匹配 |
 | `/dbs-ai-check` | AI 写作特征识别。22 条特征扫描，只诊断不改 |
@@ -148,6 +150,12 @@ npx -y skills add dontbesilent2025/dbskill -g --all
 | Skill | 做什么 |
 |---|---|
 | `/dbs-agent-migration` | Agent 工作台迁移。把任意项目整理成 Claude Code / Codex / Grok 三端一致的 Agent 工作台：审计规则文件、识别真源、统一命名与 bridge |
+
+### 进阶-内容工程模块
+
+| Skill | 做什么 |
+|---|---|
+| `/dbs-content-system` | 内容结构化系统。`dbskill` 里的单目录重型模块。先审计内容规模与边界，再建立新工程、复制原始素材、抽取内容单元、生成主题地图与选题装配稿 |
 
 ### chatroom 系列
 
@@ -232,6 +240,7 @@ Skill 之间会自动推荐下一步。比如：
 - content 需要起标题 → 推荐 xhs-title
 - content 检测出 AI 味 → 推荐 ai-check
 - content 发现内容方法上在走捷径 → 推荐 slowisfast
+- 用户已经有大量本地内容，想把旧内容变成可复用资产 → 推荐 `dbs-content-system`
 - action 发现不是执行力问题，而是方法选错了 → 推荐 slowisfast
 - action 发现用户做不动是因为目标本身就是空转的 → 推荐 goal
 - deconstruct 拆完概念后发现整句话是空转目标 → 推荐 goal
@@ -246,6 +255,7 @@ Skill 之间会自动推荐下一步。比如：
 - 任何阶段如果用户想先听不同视角 → 推荐 chatroom
 - 任何阶段如果用户用了模糊概念 → 推荐 deconstruct
 - 用户明确提到 Claude Code、Codex、Grok、`AGENTS.md`、`CLAUDE.md`、skill bridge、工作台迁移、三端统一，或说“我的 Agent 工作台很乱”“帮我统一 Claude 和 Codex 和 Grok” → 推荐 `dbs-agent-migration`
+- 用户明确提到内容结构化系统、内容资产工程化、主题地图、选题装配，或想把大量本地素材做成一个可持续生长的内容工程 → 推荐 `dbs-content-system`
 - 用户想系统学习一个主题、继续下一篇、根据学习反馈推进课程 → 推荐 `dbs-learning`
 - goal / good-question / diagnosis 已经清楚到要进入具体选择与执行 → 推荐 `dbs-decision`
 - diagnosis / benchmark / content / action / deconstruct / goal 走到有结论的节点 → 推荐 `dbs-save`
