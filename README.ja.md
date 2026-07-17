@@ -4,7 +4,7 @@
 
 > 起業家とコンテンツ制作者のための中国語 AI Skills ツールキット。ビジネス、コンテンツ、実行に関する現実の課題を Agent に渡し、明確な判断と次の具体的な行動を得られます。
 
-[![Version](https://img.shields.io/badge/version-2.17.12-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.17.13-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-28-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 

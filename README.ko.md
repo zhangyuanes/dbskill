@@ -4,7 +4,7 @@
 
 > 창업가와 콘텐츠 제작자를 위한 중국어 AI Skills 도구 상자입니다. 실제 비즈니스, 콘텐츠, 실행 문제를 Agent 에게 전달하면 명확한 판단과 바로 시작할 수 있는 다음 행동을 얻을 수 있습니다.
 
-[![Version](https://img.shields.io/badge/version-2.17.12-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.17.13-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-28-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 

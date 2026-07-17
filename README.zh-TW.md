@@ -4,7 +4,7 @@
 
 > 給創業者與內容創作者使用的中文 AI Skills 工具箱。把真實的商業、內容與行動問題交給 Agent，取得清晰判斷與可以立即執行的下一步。
 
-[![Version](https://img.shields.io/badge/version-2.17.12-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.17.13-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-28-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 

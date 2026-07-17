@@ -116,7 +116,7 @@ description: |
 | 目标模糊、说"我想做 X 但不知从何开始"、"我的目标是成为..."、"我想变得更..."、需要把愿望语法变成可检查目标 | `/dbs-goal` | 目标清晰化，维特根斯坦式语法审计 |
 | 问题模糊、想把问题说清楚、判断能不能让 Agent 自动解决、说"这个问题能不能自动化"、"帮我写问题说明书" | `/dbs-good-question` | 好问题生成器，把模糊问题改成 Agent 可推理、可验证的问题说明书 |
 | 想把重大决策长期记录下来、回填结果、复盘规律，或说"帮我记下这个决策"、"看看我是不是又在重复老问题" | `/dbs-decision` | 决策系统，在 `~/.dbs/decisions/` 里沉淀可回填、可复盘的本地项目 |
-| 想搭建知识库、让 AI 读懂本地文件夹、把资料放进知识库、从知识库找资料、确认最新版或检查资料结构 | `/dbs-knowledge` | 文件夹知识库，建立知识库导航并持续处理资料的查找、收录、调用与健康检查 |
+| 想搭建知识库、让 AI 读懂本地文件夹、把资料放进知识库、从知识库找资料、更新知识库导航、把刚才的文件加入知识库、修改错误路径、确认最新版或检查资料结构 | `/dbs-knowledge` | 文件夹知识库，建立知识库导航并持续处理资料的查找、收录、调用、轻量更新与健康检查 |
 | 明确提到 Claude Code、Codex、Grok、豆包、Trae、`~/.agents/skills`、AGENTS.md、CLAUDE.md、skill bridge、工作台迁移、多端统一，或说"我的 Agent 工作台很乱""帮我统一 Claude 和 Codex 和 Grok 和豆包" | `/dbs-agent-migration` | Agent 工作台迁移，整理规则文件、真源、命名与 Claude Code / Codex / Grok / 通用 Agents 多端 bridge |
 | 想把某个 skill 目录桥接到 Claude Code、Codex、豆包、Trae、Grok 或 `~/.agents/skills`，说"桥接这个 skill"、"让多个 Agent 都能调用"、"取消桥接"、"查看桥接状态" | `/dbs-bridge` | 多端 skill 桥接，把任意 skill 目录挂到 Claude Code、Codex、通用 Agents 和 Grok，改一处多端同步 |
 | 想检查、审查或清理本地 skill；担心广告导流、隐蔽商业意图、任务劫持、可疑外部调用或敏感数据读取 | `/dbs-skill-cleaner` | 本地 skill 清理器，先出带证据的只读审查报告，再按用户确认隔离问题 skill |
