@@ -5,12 +5,12 @@
 > 給創業者與內容創作者使用的中文 AI Skills 工具箱。把真實的商業、內容與行動問題交給 Agent，取得清晰判斷與可以立即執行的下一步。
 
 [![Version](https://img.shields.io/badge/version-2.17.13-111111.svg)](VERSION)
-[![Skills](https://img.shields.io/badge/Skills-28-111111.svg)](docs/新手入门.md#skill-全目录)
+[![Skills](https://img.shields.io/badge/Skills-29-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
 **支援：豆包、WorkBuddy、Claude Code、Codex，以及其他支援 Skills 的 Agent。**
 
-dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。它從 16,152 則公開貼文中，整理出 4,176 個結構化知識原子與 28 個可直接呼叫的 Skills。
+dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。它從 16,152 則公開貼文中，整理出 4,176 個結構化知識原子與 29 個可直接呼叫的 Skills。
 
 [快速開始](#快速開始) · [安裝](#安裝) · [能力一覽](#能力一覽) · [完整指南](docs/新手入门.md) · [更新紀錄](https://github.com/dontbesilent2025/dbskill/releases)
 
@@ -123,7 +123,7 @@ claude plugin install dbs@dontbesilent-skills
 
 ```text
 dbskill/
-├── skills/                  # 28 個正式發布的 Skills + 1 個更新入口
+├── skills/                  # 29 個正式發布的 Skills + 1 個更新入口
 ├── 知识库/                   # 知識原子、方法論文件與概念詞典
 ├── docs/                    # 新手入門、圖示與示範素材
 ├── .claude-plugin/          # Claude Code 外掛市集定義

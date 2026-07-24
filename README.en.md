@@ -5,12 +5,12 @@
 > A Chinese AI Skills toolkit for entrepreneurs and content creators. Give your Agent a real business, content, or execution problem, and get a clear judgment plus the next action you can take.
 
 [![Version](https://img.shields.io/badge/version-2.17.13-111111.svg)](VERSION)
-[![Skills](https://img.shields.io/badge/Skills-28-111111.svg)](docs/新手入门.md#skill-全目录)
+[![Skills](https://img.shields.io/badge/Skills-29-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
 **Supported in Doubao, WorkBuddy, Claude Code, Codex, and other Agents that support Skills.**
 
-Created by [dontbesilent](https://x.com/dontbesilent), dbskill distills 4,176 structured knowledge atoms and 28 directly callable Skills from 16,152 public posts.
+Created by [dontbesilent](https://x.com/dontbesilent), dbskill distills 4,176 structured knowledge atoms and 29 directly callable Skills from 16,152 public posts.
 
 [Quick start](#quick-start) · [Install](#install) · [Capabilities](#capabilities) · [Full guide](docs/新手入门.md) · [Releases](https://github.com/dontbesilent2025/dbskill/releases)
 
@@ -54,6 +54,7 @@ When you already know the task, call a Skill directly:
 | --- | --- | --- |
 | Evaluate a business, product, price, or customer | `/dbs-diagnosis` | Diagnosis, risks, validation plan |
 | Find and study benchmarks | `/dbs-benchmark` | Benchmark shortlist and research framework |
+| Find recurring solutions in structurally analogous historical cases | `/dbs-standard-answer` | Case matrix, conditional answer, and failure boundaries |
 | Create topics, content, titles, and videos | `/dbs-content`, `/dbs-hook`, `/dbs-xhs-title` | Direction and publishable copy |
 | Review resonance, logic, and reach | `/dbs-resonate`, `/dbs-script-flow`, `/dbs-spread` | Prioritized edits |
 | Clarify concepts, goals, and questions | `/dbs-deconstruct`, `/dbs-goal`, `/dbs-good-question` | Testable definitions and goals |
@@ -63,7 +64,7 @@ When you already know the task, call a Skill directly:
 | Turn a local folder into a knowledge base | `/dbs-knowledge` | Knowledge navigation, version rules, and ready-to-use prompts |
 | Audit local Skill risks | `/dbs-skill-cleaner` | Risk report and confirmed isolation |
 
-See the [full guide and Skill directory](docs/新手入门.md#skill-全目录) for all 28 Skills, examples, and workflows.
+See the [full guide and Skill directory](docs/新手入门.md#skill-全目录) for all 29 Skills, examples, and workflows.
 
 ## Install
 
@@ -123,7 +124,7 @@ The repository includes 4,176 structured knowledge atoms, methodology documents 
 
 ```text
 dbskill/
-├── skills/                  # 28 published Skills + 1 update entry
+├── skills/                  # 29 published Skills + 1 update entry
 ├── 知识库/                   # Knowledge atoms, methods, and glossary
 ├── docs/                    # Guide, diagrams, and demo assets
 ├── .claude-plugin/          # Claude Code marketplace definition
