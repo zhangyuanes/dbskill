@@ -24,57 +24,20 @@
 }}%%
 
 flowchart TD
-    A["/dbs 主入口"]
-
-    B["/dbs-diagnosis"]
-    C["/dbs-benchmark"]
-    D["/dbs-content"]
-    E["/dbs-hook"]
-    F["/dbs-xhs-title"]
-    G["/dbs-ai-check"]
-    H["/dbs-goal"]
-    I["/dbs-good-question"]
-    J["/dbs-decision"]
-    K["/dbs-save"]
-    L["/dbs-restore"]
-    M["/dbs-report"]
+    A["真实任务、材料或新反馈"]
+    B["/dbs 主入口"]
+    C["选择 1 个当前 Skill"]
+    D["完成当前任务并输出结论"]
+    E{"用户是否明确下一步？"}
+    F["尊重用户选择，进入指定 Skill"]
+    G["继续同一 Skill 的自然后续"]
 
     A --> B
-    A --> C
-    A --> D
-    A --> G
-    A --> H
-    A --> I
-    A --> J
-    A --> K
-    A --> L
-    A --> M
-
     B --> C
-    B --> D
-    B --> J
-
-    C --> J
-
+    C --> D
     D --> E
-    D --> F
-    D --> G
-
-    H --> J
-    I --> J
-
-    B --> K
-    C --> K
-    D --> K
-    H --> K
-    I --> K
-    J --> K
-
-    K --> M
-
-    L --> B
-    L --> C
-    L --> D
-    L --> H
-    L --> I
-    L --> J
+    E -->|"没有明确／不确定"| B
+    E -->|"已经明确其他 Skill"| F
+    E -->|"继续当前任务"| G
+    F --> D
+    G --> D
